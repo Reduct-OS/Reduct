@@ -1,0 +1,13 @@
+[workspace]
+members = ["builder", "kernel", "driver/acpid", "driver/pcid", "kernel/crates/*"]
+resolver = "2"
+default-members = ["builder"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+lto = true
+opt-level = "z"
+panic = "abort"
+strip = true
