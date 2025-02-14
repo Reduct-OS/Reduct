@@ -87,6 +87,10 @@ fn build_img() -> PathBuf {
             "drv/pcid",
             Path::new(env!("CARGO_BIN_FILE_PCID")).to_path_buf(),
         ),
+        (
+            "drv/ahcid",
+            Path::new(env!("CARGO_BIN_FILE_AHCID")).to_path_buf(),
+        ),
     ]);
 
     let img_path = manifest_dir.parent().unwrap().join("ReductOS.img");
