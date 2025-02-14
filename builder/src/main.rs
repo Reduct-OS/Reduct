@@ -44,9 +44,9 @@ fn main() {
 
         cmd.arg("-machine").arg("q35");
         cmd.arg("-drive").arg(ovmf_config);
-        cmd.arg("-m").arg("256m");
+        cmd.arg("-m").arg("4096");
         cmd.arg("-smp").arg(format!("cores={}", args.cores));
-        cmd.arg("-cpu").arg("qemu64,+x2apic");
+        cmd.arg("-cpu").arg("qemu64");
 
         let drive_config = format!("if=none,format=raw,id=disk1,file={}", img_path.display());
         cmd.arg("-device").arg("ahci,id=ahci");
