@@ -661,10 +661,24 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
+name = "pci_types"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c4325c6aa3cca3373503b1527e75756f9fbfe5fd76be4b4c8a143ee47430b8e0"
+dependencies = [
+ "bit_field",
+ "bitflags 2.8.0",
+]
+
+[[package]]
 name = "pcid"
 version = "0.1.0"
 dependencies = [
+ "pci_types",
+ "plain",
  "rstd",
+ "spin",
+ "x86_64 0.15.2",
 ]
 
 [[package]]
