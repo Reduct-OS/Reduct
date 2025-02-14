@@ -34,3 +34,8 @@ target = "x86_64-unknown-none"
 path = "../driver/nvmed"
 artifact = "bin"
 target = "x86_64-unknown-none"
+
+[dependencies.fsmd]
+path = "../driver/fsmd"
+artifact = "bin"
+target = "x86_64-unknown-none"

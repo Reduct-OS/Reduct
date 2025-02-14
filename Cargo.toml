@@ -1,5 +1,13 @@
 [workspace]
-members = ["builder", "kernel", "driver/acpid", "driver/pcid", "kernel/crates/*"]
+members = [
+    "builder",
+    "kernel",
+    "driver/acpid",
+    "driver/pcid",
+    "driver/nvmed",
+    "driver/fsmd",
+    "kernel/crates/*",
+]
 resolver = "2"
 default-members = ["builder"]
 
@@ -7,7 +15,6 @@ default-members = ["builder"]
 panic = "abort"
 
 [profile.release]
-lto = true
-opt-level = "z"
+opt-level = 0
 panic = "abort"
 strip = true
