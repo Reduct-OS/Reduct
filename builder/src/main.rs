@@ -48,9 +48,8 @@ fn main() {
         cmd.arg("-smp").arg(format!("cores={}", args.cores));
         cmd.arg("-cpu").arg("qemu64");
 
-        let drive_config = format!("if=none,format=raw,id=disk1,file={}", img_path.display());
-        cmd.arg("-device").arg("ahci,id=ahci");
-        cmd.arg("-device").arg("ide-hd,drive=disk1,bus=ahci.0");
+        let drive_config = format!("if=none,format=raw,id=disk0,file={}", img_path.display());
+        cmd.arg("-device").arg("nvme,drive=disk0,serial=HARDDISK");
         cmd.arg("-drive").arg(drive_config);
 
         if args.kvm {
@@ -88,8 +87,8 @@ fn build_img() -> PathBuf {
             Path::new(env!("CARGO_BIN_FILE_PCID")).to_path_buf(),
         ),
         (
-            "drv/ahcid",
-            Path::new(env!("CARGO_BIN_FILE_AHCID")).to_path_buf(),
+            "drv/nvmed",
+            Path::new(env!("CARGO_BIN_FILE_NVMED")).to_path_buf(),
         ),
     ]);
 

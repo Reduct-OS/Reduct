@@ -30,7 +30,7 @@ path = "../driver/pcid"
 artifact = "bin"
 target = "x86_64-unknown-none"
 
-[dependencies.ahcid]
-path = "../driver/ahcid"
+[dependencies.nvmed]
+path = "../driver/nvmed"
 artifact = "bin"
 target = "x86_64-unknown-none"

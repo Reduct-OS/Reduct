@@ -30,13 +30,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627"
 
 [[package]]
-name = "ahcid"
-version = "0.1.0"
-dependencies = [
- "rstd",
-]
-
-[[package]]
 name = "aml"
 version = "0.16.3"
 source = "git+https://github.com/rw-vanc/acpi.git?branch=cumulative#e4eb93891367e73d3633804002aa050edfbacb6e"
@@ -148,12 +141,12 @@ name = "builder"
 version = "0.1.0"
 dependencies = [
  "acpid",
- "ahcid",
  "anyhow",
  "argh",
  "fatfs",
  "gpt",
  "kernel",
+ "nvmed",
  "ovmf-prebuilt",
  "pcid",
  "tempfile",
@@ -635,6 +628,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "nvme"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dc1415988a5830a9600fd30214a26cec425c7130b8b113536036105e0addc9ed"
+dependencies = [
+ "log",
+]
+
+[[package]]
+name = "nvmed"
+version = "0.1.0"
+dependencies = [
+ "log",
+ "nvme",
+ "rstd",
+ "spin",
+]
+
+[[package]]
 name = "object"
 version = "0.36.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -764,6 +776,7 @@ version = "0.1.0"
 dependencies = [
  "sc",
  "spin",
+ "x86_64 0.15.2",
 ]
 
 [[package]]
