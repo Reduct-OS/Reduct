@@ -8,7 +8,7 @@ members = [
     "driver/nvmed",
     "driver/fsmd",
     "kernel/crates/*",
-    "apps/init",
+    "apps/init", "driver/fbd",
 ]
 resolver = "2"
 default-members = ["builder"]

@@ -30,6 +30,11 @@ path = "../driver/pcid"
 artifact = "bin"
 target = "x86_64-unknown-none"
 
+[dependencies.fbd]
+path = "../driver/fbd"
+artifact = "bin"
+target = "x86_64-unknown-none"
+
 [dependencies.nvmed]
 path = "../driver/nvmed"
 artifact = "bin"

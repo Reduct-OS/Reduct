@@ -179,6 +179,7 @@ dependencies = [
  "anyhow",
  "argh",
  "fatfs 0.3.6",
+ "fbd",
  "fsmd",
  "gpt",
  "init",
@@ -384,6 +385,14 @@ dependencies = [
  "env_logger",
  "fscommon",
  "log",
+ "spin",
+]
+
+[[package]]
+name = "fbd"
+version = "0.1.0"
+dependencies = [
+ "rstd",
  "spin",
 ]
 
