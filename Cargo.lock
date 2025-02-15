@@ -181,6 +181,7 @@ dependencies = [
  "fatfs 0.3.6",
  "fsmd",
  "gpt",
+ "init",
  "kernel",
  "nvmed",
  "ovmf-prebuilt",
@@ -704,6 +705,13 @@ checksum = "daca1df1c957320b2cf139ac61e7bd64fed304c5040df000a745aa1de3b4ef71"
 dependencies = [
  "icu_normalizer",
  "icu_properties",
+]
+
+[[package]]
+name = "init"
+version = "0.1.0"
+dependencies = [
+ "rstd",
 ]
 
 [[package]]

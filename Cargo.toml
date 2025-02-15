@@ -2,11 +2,13 @@
 members = [
     "builder",
     "kernel",
+    "rstd",
     "driver/acpid",
     "driver/pcid",
     "driver/nvmed",
     "driver/fsmd",
     "kernel/crates/*",
+    "apps/init",
 ]
 resolver = "2"
 default-members = ["builder"]

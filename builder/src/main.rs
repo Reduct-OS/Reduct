@@ -94,6 +94,10 @@ fn build_img() -> PathBuf {
             "drv/fsmd",
             Path::new(env!("CARGO_BIN_FILE_FSMD")).to_path_buf(),
         ),
+        (
+            "usr/init",
+            Path::new(env!("CARGO_BIN_FILE_INIT")).to_path_buf(),
+        ),
     ]);
 
     let img_path = manifest_dir.parent().unwrap().join("ReductOS.img");
