@@ -87,6 +87,10 @@ fn build_img() -> PathBuf {
             Path::new(env!("CARGO_BIN_FILE_PCID")).to_path_buf(),
         ),
         (
+            "drv/ps2d",
+            Path::new(env!("CARGO_BIN_FILE_PS2D")).to_path_buf(),
+        ),
+        (
             "drv/fbd",
             Path::new(env!("CARGO_BIN_FILE_FBD")).to_path_buf(),
         ),
