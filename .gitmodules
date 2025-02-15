@@ -6,3 +6,6 @@
 	path = driver
 	url = https://github.com/Reduct-OS/driver.git
 	branch = main
+[submodule "apps"]
+	path = apps
+	url = https://github.com/Reduct-OS/apps.git
