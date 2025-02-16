@@ -1,9 +1,9 @@
 [package]
+edition = "2024"
 name = "rstd"
 version = "0.1.0"
-edition = "2024"
 
 [dependencies]
-sc = { path = "../kernel/crates/sc" }
+sc = {path = "../kernel/crates/sc"}
 spin = "0.9.8"
 x86_64 = "0.15.2"

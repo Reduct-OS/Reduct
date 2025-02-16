@@ -1,56 +1,56 @@
 [package]
-name = "builder"
 edition = "2024"
+name = "builder"
 version = "0.1.0"
 
 [dependencies]
-argh = "0.1.12"
 anyhow = "1.0.94"
-tempfile = "3.14.0"
+argh = "0.1.12"
 gpt = "4.0.0"
 ovmf-prebuilt = "0.2.1"
+tempfile = "3.14.0"
 
 [dependencies.fatfs]
-version = "0.3.6"
 default-features = false
 features = ["std", "alloc"]
+version = "0.3.6"
 
 [dependencies.kernel]
-path = "../kernel"
 artifact = "bin"
+path = "../kernel"
 target = "x86_64-unknown-none"
 
 [dependencies.acpid]
-path = "../driver/acpid"
 artifact = "bin"
+path = "../driver/acpid"
 target = "x86_64-unknown-none"
 
 [dependencies.pcid]
-path = "../driver/pcid"
 artifact = "bin"
+path = "../driver/pcid"
 target = "x86_64-unknown-none"
 
 [dependencies.ps2d]
-path = "../driver/ps2d"
 artifact = "bin"
+path = "../driver/ps2d"
 target = "x86_64-unknown-none"
 
 [dependencies.fbd]
-path = "../driver/fbd"
 artifact = "bin"
+path = "../driver/fbd"
 target = "x86_64-unknown-none"
 
 [dependencies.nvmed]
-path = "../driver/nvmed"
 artifact = "bin"
+path = "../driver/nvmed"
 target = "x86_64-unknown-none"
 
 [dependencies.fsmd]
-path = "../driver/fsmd"
 artifact = "bin"
+path = "../driver/fsmd"
 target = "x86_64-unknown-none"
 
 [dependencies.init]
-path = "../apps/init"
 artifact = "bin"
+path = "../apps/init"
 target = "x86_64-unknown-none"
